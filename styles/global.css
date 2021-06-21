@@ -19,8 +19,8 @@ html{
 
     --gray-dark: #4D5E77;
     --gray-blue: #A1B2CD;
-    --gray- light: #E5EAF1; 
+    --gray-light: #E5EAF1; 
 
     /* 1 rem = 16px (User Agent) = 100% (User Agent) */
-    font-size: 1rem;
+    
 }
