@@ -17,9 +17,9 @@ html{
     --overlay: #040911;
     --icons-details: #A5B0C1;
 
-    --gray-dark: #4D5E77;
-    --gray-blue: #A1B2CD;
-    --gray-light: #E5EAF1; 
+    --grey-dark: #4D5E77;
+    --grey-blue: #A1B2CD;
+    --grey-light: #E5EAF1; 
 
     /* 1 rem = 16px (User Agent) = 100% (User Agent) */
     font-size: 62.5%; /* 10px */
@@ -27,6 +27,7 @@ html{
 }
 
 body{
+    display: flex;
     height: 100vh;
     background: var(--background);
 }
