@@ -1,5 +1,5 @@
 const express = require('express');
-const routes = require('./routes');
+const route = require('./routes');
 const path = require('path');
 
 const server = express();
@@ -12,6 +12,6 @@ server.set('views', path.join(__dirname, 'views'));
 
 server.use(express.urlencoded({ extended: true }))
 
-server.use(routes);
+server.use(route);
 
 server.listen(3000, () => console.log("Rodando"));
