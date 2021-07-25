@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const Database = require("../db/config");
 
 module.exports = {
@@ -12,19 +11,19 @@ module.exports = {
 
         /* Verificar se a senha está correta */
         const verifyRoom = await db.get(`SELECT * FROM rooms WHERE id = ${roomId}`)
-        if(verifyRoom.pass == password){
-            if(action == "delete"){
+        if (verifyRoom.pass == password) {
+            if (action == "delete") {
 
                 await db.run(`DELETE FROM questions WHERE id = ${questionId}`)
 
-            }else if(action == "check"){
+            } else if (action == "check") {
 
                 await db.run(`UPDATE questions SET read = 1 WHERE id = ${questionId}`)
 
             }
             res.redirect(`/room/${roomId}`)
-        } else{
-            res.render('passincorrect', {roomId: roomId})
+        } else {
+            res.render('passincorrect', { roomId: roomId })
         }
     },
 
@@ -45,16 +44,4 @@ module.exports = {
 
         res.redirect(`/room/${roomId}`)
     }
-=======
-module.exports = {
-    index(req, res) {
-        const roomId = req.params.room
-        const questionId = req.params.question
-        const action = req.params.action
-        const password = req.body.password
-
-        console.log(`room = ${roomId}, questionId = ${questionId}
-        action = ${action}, password = ${password}`)
-    }
->>>>>>> parent of 38a8063... Class 05 - Finish
 }
