@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require('express');
 const route = require('./routes');
 const path = require('path');
@@ -15,3 +16,22 @@ server.use(express.urlencoded({ extended: true }))
 server.use(route);
 
 server.listen(3000, () => console.log("Rodando"));
+=======
+const express = require('express');
+const routes = require('./routes');
+const path = require('path');
+
+const server = express();
+
+server.set('view engine', 'ejs');
+
+server.use(express.static("public"));
+
+server.set('views', path.join(__dirname, 'views'));
+
+server.use(express.urlencoded({ extended: true }))
+
+server.use(routes);
+
+server.listen(3000, () => console.log("Rodando"));
+>>>>>>> parent of 38a8063... Class 05 - Finish
